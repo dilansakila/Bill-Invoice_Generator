@@ -47,6 +47,52 @@ function pdfTemplate (props) {
               <h5>Id:{props.InvoiceNumber}</h5>
             </div>
           </div>
+          <br/>
+          <table className="table">
+            <thead>
+              <tr>
+                <th><h5>Products</h5></th>
+                <th><h5>Amount</h5></th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                List.length?
+                List.map((items,index)=>{
+                  return(
+                    <tr key={index}>
+                      <td className="col-md-9">{items.product}</td>
+                      <td className="col-md-3">{items.amount}</td>
+
+                    </tr>
+                  )
+
+                }):null
+              }
+              <tr>
+                <td className="text-right">
+                  <p>
+                    <strong>Total amount :</strong>
+                  </p>
+                  <p>
+                  <strong>Payable Amount :</strong>
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <strong>{sum}</strong>
+                  </p>
+                  <p>
+                  <strong>{sum}</strong>
+                  </p>
+                </td>
+              </tr>
+              <tr style={{color:'F81d2d'}}>
+                <td className="text-right"><h4><strong>Total:</strong></h4></td>
+                <td className="text-left"></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
     
       </div>
