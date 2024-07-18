@@ -89,17 +89,48 @@ function pdfTemplate (props) {
               </tr>
               <tr style={{color:'F81d2d'}}>
                 <td className="text-right"><h4><strong>Total:</strong></h4></td>
-                <td className="text-left"></td>
+                <td className="text-left"><h4><strong>{sum}</strong></h4></td>
+
               </tr>
             </tbody>
           </table>
         </div>
-    
+          <div>
+            <div className="col-md-12">
+              <p><b>Data:</b>{props.data}</p>
+              <br/>
+              <p><b>:Your name</b></p>
+              <p><b>Contact: 0716263189</b></p>
+            </div>
+          </div>
       </div>
     </div>
   </div>
+  <ReactToPrint trigger={()=><button>print</button>} content={()=>ref.current} documentTitle={'Invoice ${props.InvoiceNumber}'}/>
+  <button onClick={()=>setAirPopup(true)}>Add products</button>
+
+  <Dialog open={openAirPopup}>
+    <DialogTitle>
+      <div className="title">
+        <div className="hed">New Product</div>
+        <div className="icon-cross" onClick={()=>setAirPopup(false)}>Close</div>
+      </div>
+    </DialogTitle>
+    <DialogContent>
+      <div className="container">
+        <div className="forms">
+          <input type="text" value={Item} onChange={(e)=>setItem(e.target.value)} placeholder="PR name" />
+          <input type="text" value={Amount} onChange={(e)=>setItem(e.target.value)} placeholder="Amount" />
+        </div>
+        <div className="buttons">
+          <button onClick={addData}>Add</button>
+        </div>
+      </div>
+    </DialogContent>
+  </Dialog>
   </>
- )
+ );
 }
 
+export default pdfTemplate;
 
