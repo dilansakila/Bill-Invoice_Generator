@@ -1,9 +1,15 @@
 import react, {useEffect,useState} from "react";
+import pdfTemplate from './pdf/template'
 import './App.css';
 
 import React from 'react'
 
 function App() {
+  const [InvoiceNumber, setInvoiceNumber] =useState('');
+  const [Dates,setDates]=useState('');
+  const [view,setView] = useState(true);
+
+
   return (
     <>
     <div className='container'>
