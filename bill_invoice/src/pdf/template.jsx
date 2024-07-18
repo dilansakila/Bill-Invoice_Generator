@@ -18,6 +18,9 @@ function pdfTemplate (props) {
     product:Item,
     amount:Amount,
   })
+  setItem('')
+  setAmount('')
+  setAirPopup(false);
  }
  let sum=0;
  list.forEach(amount=> {
