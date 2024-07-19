@@ -16,7 +16,7 @@ function App() {
   },[])
 
   const create =()=>{
-    setView(true);
+    setView(false);
   }
 
 
