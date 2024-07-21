@@ -7,5 +7,58 @@
   padding: 40px 30px;
   position:relative;
   box-shadow: 0 1px 21px #808080;
+  font-size: 10px;
 
+}
+
+.main thead{
+  background: #1E2F23;
+  color: #fff;
+}
+
+.img{
+  height: 100px;
+}
+
+h1{
+  text-align: center;
+}
+
+.barcode{
+  margin-top: 90px;
+}
+
+.bbc{
+  margin-left: 900px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.input{
+  margin: 10px;
+  border: 0.5px solid rgb(34, 131, 200);
+}
+
+.buttons button{
+  width: 100px;
+  height: 40px;
+  background: #325aa8;
+  color: white;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  margin-left: 10px;
+
+}
+
+.buttons button:hover{
+  background: #1E1F23;
+  color: #ffffff;
+  transition: 0.5s;
 }

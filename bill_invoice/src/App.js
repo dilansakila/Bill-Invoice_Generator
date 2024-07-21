@@ -1,5 +1,5 @@
 import react, {useEffect,useState} from "react";
-import pdfTemplate from './pdf/template'
+import pdfTemplate from './Pdf/template'
 import './App.css';
 
 import React from 'react'
